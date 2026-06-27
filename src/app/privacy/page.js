@@ -85,7 +85,7 @@ export default function PrivacyPage() {
           <p className="text-sm text-blue-800 leading-relaxed">
             <strong>Your privacy matters.</strong> If you have any questions or concerns about this
             Privacy Policy, please <a href="/contact" className="underline hover:text-blue-600">contact us</a>.
-            We're committed to protecting your personal data.
+            We&apos;re committed to protecting your personal data.
           </p>
         </div>
       </div>
