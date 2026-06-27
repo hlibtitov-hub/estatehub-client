@@ -76,7 +76,7 @@ export default function TermsPage() {
           <p className="text-sm text-blue-800 leading-relaxed">
             <strong>Questions?</strong> If you have any questions about these Terms of Service,
             please <a href="/contact" className="underline hover:text-blue-600">contact us</a> and
-            we'll be happy to help.
+            we&apos;ll be happy to help.
           </p>
         </div>
       </div>

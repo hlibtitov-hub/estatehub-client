@@ -1163,7 +1163,7 @@ export default function MortgagePage() {
               <button onClick={openSheet}
                 className="relative flex items-center gap-2 overflow-hidden bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-base hover:bg-blue-50 transition-colors">
                 <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/40 to-transparent shimmer-sweep" />
-                <span className="relative z-10">Get pre-approved — it's free</span>
+                <span className="relative z-10">Get pre-approved — it&apos;s free</span>
                 <ArrowRight size={16} className="relative z-10" />
               </button>
             </motion.div>

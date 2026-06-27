@@ -101,7 +101,7 @@ export default function ContactPage() {
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
             <h3 className="text-lg font-semibold text-gray-900 mb-1">Message sent!</h3>
-            <p className="text-sm text-gray-500">We'll get back to you within 24 hours.</p>
+            <p className="text-sm text-gray-500">We&apos;ll get back to you within 24 hours.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col gap-4">

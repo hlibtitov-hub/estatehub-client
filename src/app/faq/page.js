@@ -41,7 +41,7 @@ export default function FAQPage() {
     <main className="max-w-2xl mx-auto px-4 sm:px-6 py-14">
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold text-gray-900 mb-3">Frequently asked questions</h1>
-        <p className="text-gray-500">Can't find an answer? <Link href="/contact" className="text-blue-600 hover:underline">Contact us</Link>.</p>
+        <p className="text-gray-500">Can&apos;t find an answer? <Link href="/contact" className="text-blue-600 hover:underline">Contact us</Link>.</p>
       </div>
 
       <div className="flex flex-col gap-2">
