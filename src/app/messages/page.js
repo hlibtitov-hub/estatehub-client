@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useAuth } from '@/context/AuthContext'
@@ -96,7 +96,7 @@ function Bubble({ msg, isMe }) {
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
-export default function MessagesPage() {
+function MessagesPageInner() {
   const { user, loading: authLoading } = useAuth()
   const { emit, on, onlineUsers, resetUnread } = useSocket()
   const router              = useRouter()
@@ -415,5 +415,13 @@ export default function MessagesPage() {
 
       </div>
     </main>
+  )
+}
+
+export default function MessagesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 flex items-center justify-center"><div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" /></div>}>
+      <MessagesPageInner />
+    </Suspense>
   )
 }

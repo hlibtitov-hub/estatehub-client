@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'motion/react'
@@ -276,7 +276,7 @@ function ListCard({ property, highlighted, favIds, onFavToggle }) {
 }
 
 // ─── Search Page ──────────────────────────────────────────────────────────────
-export default function SearchPage() {
+function SearchPageInner() {
   const { user } = useAuth()
   const urlParams = useSearchParams()
   const router = useRouter()
@@ -802,5 +802,13 @@ export default function SearchPage() {
 
       </div>
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" /></div>}>
+      <SearchPageInner />
+    </Suspense>
   )
 }
