@@ -411,31 +411,6 @@ function HeroSlideshow() {
   )
 }
 
-// ─── Aceternity: Background Beams ─────────────────────────────────────────────
-const BEAMS = [
-  { left: '8%',  height: '55%', duration: '7s',  delay: '0s',   opacity: 0.5 },
-  { left: '18%', height: '40%', duration: '9s',  delay: '1.5s', opacity: 0.3 },
-  { left: '30%', height: '65%', duration: '6s',  delay: '3s',   opacity: 0.4 },
-  { left: '42%', height: '45%', duration: '11s', delay: '0.8s', opacity: 0.25 },
-  { left: '55%', height: '70%', duration: '8s',  delay: '2s',   opacity: 0.35 },
-  { left: '68%', height: '38%', duration: '10s', delay: '4s',   opacity: 0.3 },
-  { left: '78%', height: '58%', duration: '7.5s',delay: '1s',   opacity: 0.45 },
-  { left: '88%', height: '42%', duration: '9.5s',delay: '2.5s', opacity: 0.28 },
-]
-
-function BackgroundBeams() {
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      {BEAMS.map((b, i) => (
-        <div key={i} className="bg-beam"
-          style={{
-            left: b.left, height: b.height, opacity: b.opacity,
-            animationDuration: b.duration, animationDelay: b.delay, top: 0,
-          }} />
-      ))}
-    </div>
-  )
-}
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 const TYPEWRITER_WORDS = ['perfect home.', 'dream apartment.', 'ideal studio.', 'best investment.']
@@ -473,8 +448,6 @@ function Hero({ search, setSearch, onSearch, type, setType, onScrollToListings }
       <div className="flex flex-col-reverse lg:flex-row lg:h-[600px]">
         {/* LEFT */}
         <div className="relative flex items-center w-full lg:w-[50%] flex-shrink-0 overflow-hidden px-8 sm:px-14 lg:px-20 py-10 lg:py-0">
-          {/* Aceternity: Background Beams */}
-          <BackgroundBeams />
           {/* Blob bg */}
           <div aria-hidden className="pointer-events-none absolute inset-0">
             <div className="absolute -top-20 -left-20 w-[420px] h-[420px] rounded-full opacity-40 blur-3xl animate-blob"
